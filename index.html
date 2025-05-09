@@ -3,34 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tronics Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Main Container -->
+    <!-- Main Content -->
     <div class="container">
-        <!-- Header -->
-        <header>
+        <header class="header">
             <h1>TRONICS</h1>
+            <p class="tagline">This website is a productivity dashboard and a scientific dashboard for Engineers.</p>
         </header>
 
-        <!-- Description Section -->
-        <section class="description">
-            <p>This website is a productivity and scientific dashboard designed for engineers. It contains various tools and services to boost productivity.</p>
-        </section>
-
-        <!-- Services Section -->
         <section class="services">
             <h2>Our Services:</h2>
             <div class="service-item">
-                <a href="calculator.html">
-                    <button class="service-button">Scientific Calculator</button>
-                </a>
+                <button onclick="window.location.href='calculator.html'">Scientific Calculator</button>
             </div>
         </section>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Powered by Tronics Team</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

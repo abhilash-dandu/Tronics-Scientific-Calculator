@@ -1,4 +1,4 @@
-
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,54 +6,83 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #001f3d; /* Dark Blue */
+  font-family: 'Roboto', sans-serif;
+  background-color: #0a1d37;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
   overflow: hidden;
-  transition: background-color 0.3s ease-in-out;
 }
 
-/* Container */
-.container {
+/* Header Styling */
+.header {
   text-align: center;
-  max-width: 1200px;
-  padding: 20px;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
+  margin-bottom: 40px;
 }
 
-/* Header */
-header h1 {
+.header h1 {
+  font-family: 'Raleway', sans-serif;
   font-size: 4rem;
-  color: white;
-  text-shadow: 0 0 15px #00bfff, 0 0 25px #00bfff, 0 0 35px #00bfff;
-  margin-bottom: 20px;
-  opacity: 0;
-  animation: slideDown 1.2s ease-out forwards;
+  color: #03a9f4;
+  text-shadow: 0 0 10px rgba(3, 169, 244, 0.8);
+  margin-bottom: 10px;
+  animation: glow 1.5s ease-in-out infinite alternate;
 }
 
-@keyframes slideDown {
+.tagline {
+  font-size: 1.5rem;
+  color: #ffffff;
+  opacity: 0.8;
+  animation: fadeIn 2s ease-out 1s forwards;
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.service-item button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #03a9f4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-item button:hover {
+  background-color: #0288d1;
+  transform: scale(1.1);
+}
+
+/* Footer Styling */
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+/* Animations */
+@keyframes glow {
   0% {
-      transform: translateY(-50px);
-      opacity: 0;
+      text-shadow: 0 0 10px rgba(3, 169, 244, 1), 0 0 20px rgba(3, 169, 244, 1), 0 0 30px rgba(3, 169, 244, 1);
   }
   100% {
-      transform: translateY(0);
-      opacity: 1;
+      text-shadow: 0 0 20px rgba(3, 169, 244, 1), 0 0 30px rgba(3, 169, 244, 1), 0 0 40px rgba(3, 169, 244, 1);
   }
-}
-
-/* Description */
-.description p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  font-weight: 300;
-  opacity: 0;
-  animation: fadeIn 1s 0.5s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -62,94 +91,5 @@ header h1 {
   }
   100% {
       opacity: 1;
-  }
-}
-
-/* Services */
-.services {
-  margin-top: 30px;
-}
-
-.services h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 20px;
-  opacity: 0;
-  animation: fadeIn 1s 1s ease-in-out forwards;
-}
-
-.service-item {
-  margin-top: 20px;
-}
-
-/* Service Button */
-.service-button {
-  background-color: #00bfff;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  opacity: 0;
-  animation: buttonFadeIn 1s 1.5s ease-in-out forwards;
-}
-
-@keyframes buttonFadeIn {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-
-.service-button:hover {
-  background-color: #0099cc;
-  transform: translateY(-5px);
-}
-
-.service-button:active {
-  transform: translateY(1px);
-}
-
-/* Media Query for Responsive Design */
-@media screen and (max-width: 768px) {
-  header h1 {
-      font-size: 3rem;
-  }
-
-  .description p {
-      font-size: 1rem;
-  }
-
-  .services h2 {
-      font-size: 1.5rem;
-  }
-
-  .service-button {
-      font-size: 1rem;
-      padding: 12px 25px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  header h1 {
-      font-size: 2.5rem;
-  }
-
-  .description p {
-      font-size: 0.9rem;
-  }
-
-  .services h2 {
-      font-size: 1.2rem;
-  }
-
-  .service-button {
-      font-size: 1rem;
-      padding: 10px 20px;
   }
 }
